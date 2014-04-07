@@ -1,0 +1,110 @@
+
+\section{Limit where equation 8 predicts a frequency of zero}
+
+Equation 8 states that
+
+\begin{equation}
+  \label{eqn:eigs}
+  \lambda_{1,2}= -\frac{1}{2}\frac{c-\frac{1}{2}\rho U\mathcal{A}a_1}{(m+m_a)}\pm\frac{1}{2}\sqrt{\left[\frac{c-\frac{1}{2}\rho U\mathcal{A}a_1}{(m+m_a)}\right]^2-4\frac{k}{(m+m_a)}}.
+\end{equation}
+
+So, a frequency can be estimated from the square root term, namely
+
+\begin{equation}
+  \label{eqn:freq}
+  f = \sqrt{\left[\frac{c-\frac{1}{2}\rho U\mathcal{A}a_1}{(m+m_a)}\right]^2-4\frac{k}{(m+m_a)}}.
+\end{equation}
+
+We want to know the limit where this frequency goes to zero in terms
+of our non-dimensional parameters \massstiff and \massdamp. So, we can
+non-dimensionalize the above equation as follows:
+
+\begin{align}
+  \cstar&=\frac{cD}{\mtot U} \\
+  \mstar&=\frac{\mtot}{\rho \mathcal{A}D} \\
+  \ustar&=\frac{U}{f_N D} = \frac{2\pi U}{\sqrt{k/\mtot}D}
+\end{align}
+where
+\begin{align}
+  \mathcal{A} &= DL \\
+  \mtot & = m + m_a
+\end{align}
+where $m$ is the mass of the body and $m_a$ is the added mass.
+
+So, these nondimensional parameters can be reorganized to show that
+\begin{align}
+  \frac{k}{\mtot} &= \left(\frac{U}{D}\right)^2\left(\frac{2\pi}{U*}\right)^2 \\
+  \frac{c}{\mtot} &= c*\frac{U}{D}
+\end{align}
+
+These can then be substituted into equation (\ref{eqn:freq}) to give
+\begin{equation}
+f = \sqrt{\left[c*\left(\frac{U}{D}\right) - \frac{1}{2}\frac{a_1}{m*}\left(\frac{U}{D}\right)\right]^2 - 4\left(\frac{U}{D}\right)^2\frac{2\pi}{U*}}.
+\end{equation}
+This can then be rewritten as
+\begin{equation}
+  f = \sqrt{\left(\frac{U}{D}\right)^2\left(c*-\frac{a_1}{2m*}\right)^2 - 4\left(\frac{U}{D}\right)^2\left(\frac{2\pi}{U*}\right)^2}.
+\end{equation}
+You can then take the factor of $U/D$ to the left-hand side to get
+\begin{equation}
+  \frac{fD}{U} = \sqrt{\left(c*-\frac{a_1}{2m*}\right)^2 - 4\left(\frac{2\pi}{U*}\right)^2}.
+\end{equation}
+Expanding terms gives
+\begin{equation}
+  \frac{fD}{U} = \sqrt{c*^2 - \frac{2c*a_1}{2m*} + \frac{a_1^2}{4m*^2} - \frac{16\pi^2}{U*^2}}.
+\end{equation}
+Multiplying through by $m*^2$ gives
+\begin{equation}
+  \frac{fD}{U} = \sqrt{c*^2m*^2 - c*m*a_1 + \frac{a_1^2}{4} - \frac{16\pi^2m*^2}{U*^2}}.
+\end{equation}
+
+Now, we have defined
+\begin{align}
+  \Pi_1 &= \frac{4\pi^2m*^2}{U*^2} \\
+  \Pi_2 &= m*c*,
+\end{align}
+so we can substitute these in to arrive at the final statement of
+\begin{equation}
+  \label{eqn_freq_final}
+  \frac{fD}{U} = \sqrt{\Pi_2^2 - \Pi_2a_1 + \frac{a_1^2}{4} - 4\Pi_1}.
+\end{equation}
+
+So, by setting $f=0$, the relationship between $\Pi_1$ and $\Pi_2$ at
+the limit can be found.
+
+\section{Finding the terminal velocity of the body when no frequency
+  is predicted by equation 8}
+
+For very small $Pi_1$ where no frequency is predicted by equation 8,
+we can assume that the body quickly accelerates to a velocity where
+the lift force is blanced by the damping force. While the displacement
+is small, the spring force is basically negligible. Also, for the
+velocity to saturate (reach a constant value), we need only one
+nonlinear term in the equation, and so we retain only up to the cubic
+velocity term in the lift force to give
+\begin{equation}
+  c\dot{y} = \frac{1}{2}\rho U^2\mathcal{A}\left[a_1\left(\frac{\dot{y}}{U}\right) + a_3\left(\frac{\dot{y}}{U}\right)^3\right].
+\end{equation}
+Rearranging and dividing by $\dot{y}$ gives
+\begin{equation}
+  \left(\frac{1}{2}\rho U\mathcal{A}a_1 - c\right) + \frac{1}{2}\rho\frac{1}{U}\mathcal{A}a_3\dot{y}^2 = 0,
+\end{equation}
+So that the terminal velocity $\dot{y}$ is given by
+\begin{equation}
+  \dot{y} = \pm\sqrt{-\frac{(1/2)\rho U^2\mathcal{A}a_1 - cU}{(1/2)\rho\mathcal{A}a_3}}.
+\end{equation}
+This can be written as
+\begin{equation}
+  \dot{y} = \pm\sqrt{U^2\frac{a_1}{a_3} - U^2\frac{c}{(1/2)\rho U\mathcal{A}a_3}}
+\end{equation}
+or
+\begin{equation}
+  \frac{\dot{y}}{U} = \pm\sqrt{\frac{a_1}{a_3} - \frac{c}{(1/2)\rho U\mathcal{A}a_3}}.
+\end{equation}
+
+Finally, the definition of $\Pi_2$ can be substituted into the last term to give
+\begin{equation}
+  \frac{\dot{y}}{U} = \pm\sqrt{\frac{1}{a_3}(a_1 - 2\Pi_2)},
+\end{equation}
+hence the terminal, or maximum velocity is a function of $\Pi_2$ only.
+
